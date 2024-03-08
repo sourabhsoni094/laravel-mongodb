@@ -72,9 +72,7 @@ class Collection
         }
 
         $queryString = $this->collection->getCollectionName() . '.' . $method . '(' . implode(',', $query) . ')';
-
         $this->connection->logQuery($queryString, [], $time);
-
         return $result;
     }
 }
